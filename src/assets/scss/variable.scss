@@ -1,0 +1,88 @@
+$primary_color: #0D6EFD;
+$primary_color_1: #367dfb;
+$black_color: #000000;
+$white_color: #ffffff;
+$red_color: #FF0000;
+$Light_wheat: #eee;
+
+// responsive class
+// Small tablets and large smartphones (landscape view)
+
+$screen-sm-max: 575px;
+// Small tablets (portrait view)
+$screen-md-max: 767px;
+// Tablets and small desktops
+$screen-lg-max: 991px;
+// Semi Large tablets and desktops
+$screen-xl-max: 1199px;
+// Large tablets and desktops
+$screen-xxl-max: 1359px;
+// Extra Large tablets and desktops
+$screen-xxxl-max: 1499px;
+// Extra Large tablets and desktops
+$screen-xxll-max: 1699px;
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Semi Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+}
+
+// Double Extra large devices
+@mixin xxxl {
+  @media (max-width: #{$screen-xxxl-max}) {
+    @content;
+  }
+}
+
+// Double Extra large devices
+@mixin xxll {
+  @media (max-width: #{$screen-xxll-max}) {
+    @content;
+  }
+}
+
+// mediaSizes
+$gloabal_width: 1920px;
+$mediaSizes: (
+  "xs": 320px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1500px,
+);
+.container {
+  @media (min-width: map-get($mediaSizes, "xxl")) {
+    max-width: $gloabal_width !important;
+  }
+}

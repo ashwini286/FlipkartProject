@@ -1,0 +1,22 @@
+@import '../../../assets/scss/variable.scss';
+
+.category-section {
+    padding: 5px 0;
+    .category-box {
+        text-align: center;
+        a {
+            font-size: 12px;
+            font-weight: bold;
+            color: $black_color;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        img{
+            height: 55px;
+        }
+        .category-img{
+            display: inline-block;
+        }
+    }
+}

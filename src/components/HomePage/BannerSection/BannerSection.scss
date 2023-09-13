@@ -1,0 +1,23 @@
+@import '../../../assets/scss/variable.scss';
+
+.banner-section{
+    img{
+        width: 100%;
+    }
+
+    .slick-prev{
+        left: 100px;
+        z-index: 1;
+        color: $white_color;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    .slick-next{
+        right: 100px;
+        z-index: 1;
+        color: $white_color;
+        width: 30px;
+        height: 30px;
+    }
+}

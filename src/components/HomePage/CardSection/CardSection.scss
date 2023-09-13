@@ -1,0 +1,36 @@
+@import '../../../assets/scss/variable.scss';
+
+.card-section{
+    padding-bottom: 60px;
+    .top-section{
+        margin: 40px 0;
+        text-align: center;
+        .deal-section{
+            color: $primary_color;
+        }
+        .sale-section{
+            color: $red_color;
+        }
+    }
+    .bottom-section{
+        .delivery-text{
+            font-size: 11px;
+            margin: 10px 0 15px 0;
+        }
+        .card-img{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .sub-title{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            a{
+                color: $black_color;
+                text-decoration: none;
+            }
+        }
+    }
+}
