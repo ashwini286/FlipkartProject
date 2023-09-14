@@ -1,13 +1,36 @@
 import React from 'react'
 import Iphone from '../assets/images/homepage/61BGE6iu4AL._SL1500.jpg'
 import ThumbnailIphone from '../assets/images/red-iphone.jpeg'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Helmet } from 'react-helmet';
 import { Button } from 'reactstrap';
 
 const OrderSummary = () => {
+
     const navigate = useNavigate()
+
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+  
+    // Retrieve and display input values from URL parameters
+    const name = params.get('name');
+    const mobileNumber = params.get('mobile_number');
+    const pin = params.get('pin');
+    const city = params.get('city');
+    const state = params.get('state');
+    const flat = params.get('flat');
+    const area = params.get('area');
+  
+  
+    console.log('Name:', name);
+    console.log('Mobile Number:', mobileNumber);
+    console.log('PIN:', pin);
+    console.log('City:', city);
+    console.log('State:', state);
+    console.log('Flat/House:', flat);
+    console.log('Area:', area);
+
     return (
         <>
             <Helmet>
@@ -32,9 +55,9 @@ const OrderSummary = () => {
                         <div class="card-body">
                             <h3>Delivered to:</h3>
                             <div class="address-div mt-2">
-                                <h4 class="customer-name">Shivraj kushwah</h4>
-                                <div class="mb-2 customer-address"> MP 474003</div>
-                                <div class="customer-contact">8269522681</div>
+                                <h4 class="customer-name">{name}</h4>
+                                <div class="mb-2 customer-address"> {flat}, {area}, {state}, {pin}</div>
+                                <div class="customer-contact">{mobileNumber}</div>
                             </div>
 
                         </div>
@@ -109,10 +132,10 @@ const OrderSummary = () => {
                                 <span class="data selling_price"> ₹1592</span>
                             </div>
                             <div class="col">
-                                <form action="https://flipkartoutlet.com/Payment" method="post">
+                                <form >
                                     <input type="hidden" name="slug" id="slug" />
                                     <input type="hidden" name="address" id="address" value="Array" />
-                                    <button type="submit" class="btn bg-warning" >Continue</button>
+                                    <button onClick={()=> navigate("/payment-details")} type="submit" class="btn bg-warning" >Continue</button>
                                 </form>
                             </div>
                         </div>
