@@ -7,8 +7,8 @@ const Footer = () => {
     <>
       <div className="footer-btn">
         <div className="foot-btn">
-          <Link className='btn btn-light w-100 addtocard'>Add To Cart</Link>
-          <Link className='btn bg-warning w-100 buynow'>Buy Now</Link>
+          <Link to="/delivery-address" className='btn btn-light w-100 addtocard'>Add To Cart</Link>
+          <Link to="/delivery-address" className='btn bg-warning w-100 buynow'>Buy Now</Link>
         </div>
       </div>
     </>

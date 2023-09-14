@@ -81,7 +81,7 @@ const ProductsTab = () => {
                             </Col>
                         </Row>
                         <Row className='btmslider'>
-                            <Col className='col-sm-4'>
+                            <Col>
                                 <Slider
                                     {...smallslider}
                                     className=""
