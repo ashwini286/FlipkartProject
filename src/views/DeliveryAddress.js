@@ -121,10 +121,9 @@ const DeliveryAddress = () => {
                                             className="form-control"
                                             type="text"
                                             id="city"
-                                            city="city"
+                                            name="city"
                                             placeholder="Town/City"
                                             required
-                                            fdprocessedid="r90kw9"
                                             value={formData.city}
                                             onChange={handleInputChange}
                                         />

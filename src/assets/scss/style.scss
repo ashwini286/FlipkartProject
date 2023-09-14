@@ -188,9 +188,11 @@ input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="re
 }
 
 .payment-type{
-    label {
+    a {
         display: block;
         margin: 10px;
+        text-decoration: none;
+        color: $black_color;
     }
     .payment-input{
         display: none;

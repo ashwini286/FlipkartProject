@@ -6,7 +6,30 @@ import { Button } from 'reactstrap';
 
 
 const PaymentDetails = () => {
-    const navigate = useNavigate()
+
+
+    const navigate = useNavigate();
+
+    {/* <a href="upi://pay?pa=upiaddress@okhdfcbank&pn=JohnDoe&cu=INR">Buy Now</a><br /> working
+
+<a href="upi://pay?pa=UPIID@oksbi&amp;pn=JOHN BRITAS AK &amp;cu=INR" class="upi-pay1"> 2 Pay Now !</a><br />
+
+<a href="upi://pay?pa=UPIID@oksbi&amp;pn=FNAME SNAME K&amp;cu=INR" class="upi-pay1">3 Pay Now !</a><br />
+
+<a href="tez://upi/pay?pa=UPIID@oksbi&amp;pn=FNAME SNAME K&amp;cu=INR" class="upi-pay1">Google pay Now !</a><br /> working
+
+<a href="tez://upi/pay?pa=8269522681@ybl&amp;pn=FNAME SNAME K &amp;am=399 &amp;cu=INR" class="upi-pay1">Google pay Now 2 !</a><br /> working
+
+
+<a href="phonepe://pay?pa=UPIID@oksbi&amp;pn=FNAME SNAME K&amp;cu=INR" class="upi-pay1">Phone Now !</a><br /> not working
+
+<a href="phonepe://pay?pa=upiaddress@okhdfcbank&pn=JohnDoe&cu=INR" class="upi-pay1">Phone 1 Now !</a><br /> working
+
+
+<a href="phonepe://pay?pa=8269522681@ybl&pn=JohnDoe&am=399&cu=INR" class="upi-pay1">Phone 2 Now !</a><br /> working
+
+<a href="phonepe://pay?pa=8269522681@ybl&pn= shiv raj &am=399&cu=INR" class="upi-pay1">Phone 3 Now !</a><br /> working */}
+
     return (
         <>
 
@@ -18,7 +41,7 @@ const PaymentDetails = () => {
                 <div className="container-fluid p-3 header-container">
                     <div className="row header align-items-center">
                         <div className="col-1">
-                        <Button onClick={()=> navigate(-1)}  className='back-arrow' ><FaArrowLeftLong /></Button>
+                            <Button onClick={() => navigate(-1)} className='back-arrow' ><FaArrowLeftLong /></Button>
                         </div>
                         <div className="col-10 ms-4 ms-sm-0">
                             <div className="menu-logo">
@@ -33,39 +56,47 @@ const PaymentDetails = () => {
                         <div class="payment-type mt-3 card p-md-5 px-3">
                             <div class="card card-click mt-3">
                                 <div class="g-pay w-100 box">
-                                    <label> <input type="radio" name="radioGroup" value="gpay" className='payment-input' /> <img
-                                        src="https://flipkartoutlet.com/assets/front/flipkart/img/gpay_icon.svg" alt=""
-                                        width="30px" /> Google Pay</label>
+                                    <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1&cu=INR">
+                                        <label> <input type="radio" name="radioGroup" value="gpay" className='payment-input' /> <img
+                                            src="https://flipkartoutlet.com/assets/front/flipkart/img/gpay_icon.svg" alt=""
+                                            width="30px" /> Google Pay</label>
+                                    </a>
                                 </div>
                             </div>
                             <div class="card card-click mt-3">
                                 <div class="g-pay w-100 box">
-
-                                    <label> <input type="radio" name="radioGroup" value="phonepe" className='payment-input' /> <img
-                                        src="https://flipkartoutlet.com/assets/front/flipkart/img/phonepe.svg" alt=""
-                                        width="30px" /> Phone Pay</label>
+                                    <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1&cu=INR">
+                                        <label> <input type="radio" name="radioGroup" value="phonepe" className='payment-input' /> <img
+                                            src="https://flipkartoutlet.com/assets/front/flipkart/img/phonepe.svg" alt=""
+                                            width="30px" /> Phone Pay</label>
+                                    </a>
                                 </div>
                             </div>
                             <div class="card card-click mt-3">
                                 <div class="g-pay w-100 box">
-
-                                    <label><input type="radio" name="radioGroup" value="paytm" className='payment-input' /> <img
-                                        src="https://flipkartoutlet.com/assets/front/flipkart/img/paytm_icon.svg" alt=""
-                                        width="30px" /> Paytm</label>
+                                    <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1&cu=INR">
+                                        <label><input type="radio" name="radioGroup" value="paytm" className='payment-input' /> <img
+                                            src="https://flipkartoutlet.com/assets/front/flipkart/img/paytm_icon.svg" alt=""
+                                            width="30px" /> Paytm</label>
+                                    </a>
                                 </div>
                             </div>
                             <div class="card card-click mt-3">
                                 <div class="g-pay w-100 box">
-                                    <label> <input type="radio" name="radioGroup" value="bhim_upi" className='payment-input' /> <img
-                                        src="https://flipkartoutlet.com/assets/front/flipkart/img/bhim_upi.svg" alt=""
-                                        width="30px" /> BHIM UPI</label>
+                                    <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1&cu=INR">
+                                        <label> <input type="radio" name="radioGroup" value="bhim_upi" className='payment-input' /> <img
+                                            src="https://flipkartoutlet.com/assets/front/flipkart/img/bhim_upi.svg" alt=""
+                                            width="30px" /> BHIM UPI</label>
+                                    </a>
                                 </div>
                             </div>
                             <div class="card card-click mt-3 mb-3">
                                 <div class="g-pay w-100 box">
-                                    <label><input type="radio" name="radioGroup" value="whatspp_pay" className='payment-input' /> <img
-                                        src="https://flipkartoutlet.com/assets/front/flipkart/img/whatspp_pay.svg" alt=""
-                                        width="30px" /> WhatsApp Pay</label>
+                                    <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1&cu=INR">
+                                        <label><input type="radio" name="radioGroup" value="whatspp_pay" className='payment-input' /> <img
+                                            src="https://flipkartoutlet.com/assets/front/flipkart/img/whatspp_pay.svg" alt=""
+                                            width="30px" /> WhatsApp Pay</label>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +127,7 @@ const PaymentDetails = () => {
                             </div>
                         </div>
                     </form>
-                </div >
+                </div>
 
 
                 <div class="container-fluid foot-summary mb-3" >
@@ -117,7 +148,7 @@ const PaymentDetails = () => {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     )
 }

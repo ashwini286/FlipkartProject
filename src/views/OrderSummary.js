@@ -56,7 +56,7 @@ const OrderSummary = () => {
                             <h3>Delivered to:</h3>
                             <div class="address-div mt-2">
                                 <h4 class="customer-name">{name}</h4>
-                                <div class="mb-2 customer-address"> {flat}, {area}, {state}, {pin}</div>
+                                <div class="mb-2 customer-address"> {flat}, {area}, {city}, {state}, {pin}</div>
                                 <div class="customer-contact">{mobileNumber}</div>
                             </div>
 

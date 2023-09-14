@@ -1,36 +1,60 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import './CardSection.scss'
 import { Link } from 'react-router-dom';
 import Iphone14_128gb from '../../../assets/images/homepage/61BGE6iu4AL._SL1500.jpg'
 import Assured from '../../../assets/images/assured.png'
+import { CardData } from '../../../Data/CardData';
 
 const CardSection = () => {
 
+    const [data, setData] = useState(CardData)
 
-    function startCountdown(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+    const [minutes, setMinutes] = useState(10);
+    const [seconds, setSeconds] = useState(30);
+  
+    useEffect(() => {
+      let timer = setInterval(() => {
+        if (minutes === 0 && seconds === 0) {
+          clearInterval(timer); // Timer reached 00:00, stops the timer
+          alert("Time is over")
+        } else {
+          if (seconds === 0) {
+            setMinutes(minutes - 1);
+            setSeconds(59);
+          } else {
+            setSeconds(seconds - 1);
+          }
+        }
+      }, 1000);
+  
+      return () => clearInterval(timer);
+    }, [minutes, seconds]);
 
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            display.textContent = minutes + ":" + seconds;
+    // function startCountdown(duration, display) {
+    //     var timer = duration, minutes, seconds;
+    //     setInterval(function () {
+    //         minutes = parseInt(timer / 60, 10);
+    //         seconds = parseInt(timer % 60, 10);
 
-            if (--timer < 0) {
-                timer = 0;
-                // You can add any code you want to execute when the countdown reaches 0 here.
-            }
-        }, 1000);
-    }
+    //         minutes = minutes < 10 ? "0" + minutes : minutes;
+    //         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    window.onload = function () {
-        var countdownDisplay = document.getElementById("countdown");
-        var countdownDuration = 10 * 60 + 30; // 4 minutes 30 seconds in seconds
-        startCountdown(countdownDuration, countdownDisplay);
-    };
+    //         display.textContent = minutes + ":" + seconds;
+
+    //         if (--timer < 0) {
+    //             timer = 0;
+    //             // You can add any code you want to execute when the countdown reaches 0 here.
+    //         }
+    //     }, 1000);
+    // }
+
+    // window.onload = function () {
+    //     var countdownDisplay = document.getElementById("countdown");
+    //     var countdownDuration = 10 * 60 + 30; // 4 minutes 30 seconds in seconds
+    //     startCountdown(countdownDuration, countdownDisplay);
+    // };
 
     return (
         <>
@@ -40,7 +64,7 @@ const CardSection = () => {
                         <Row>
                             <Col className='deal-section'>
                                 <h6>Deals of the Day</h6>
-                                <div class="countdown" id="countdown">00:00</div>
+                                <div class="countdown" id="countdown">{`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</div>
                             </Col>
                             <Col className='sale-section'>
                                 <h6>SALE IS LIVE</h6>
@@ -51,43 +75,31 @@ const CardSection = () => {
                 <div className="bottom-section">
                     <Container>
                         <Row>
-                            <Col className='col-6'>
-                            <div className="card bg-light">
-                                    <div className="card-body text-center">
-                                        <div className="card-img">
-                                            <Link>
-                                                <img src={Iphone14_128gb} alt="Iphone" width={110} height={110} />
-                                                <p className='sub-title'>Apple iPhone 14 Plus Blue 128GB</p>
-                                            </Link>
-                                        </div>
-                                        <div className="card-text">
-                                            <p><span className='text-success'>2% Off </span> <del>₹69000</del></p>
-                                            <div className="assured"><b>₹ 1592 </b><img src={Assured} alt="Assured" width={77} /></div>
-                                            <div className="delivery-text">Free Delivery in Two Days</div>
-                                        </div>
+                            {
+                                data.map((curElem) => {
+                                    const { id, mobile_image, title, link, discount, del_price, price, assured_image, free_delivery } = curElem
+                                    return (
+                                        <Col className='col-6 mb-4' key={id}>
+                                            <div className="card bg-light">
+                                                <div className="card-body text-center">
+                                                    <div className="card-img">
+                                                        <Link to={link}>
+                                                            {mobile_image}
+                                                            <p className='sub-title'>{title}</p>
+                                                        </Link>
+                                                    </div>
+                                                    <div className="card-text">
+                                                        <p><span className='text-success'>{discount} </span> <del>{del_price}</del></p>
+                                                        <div className="assured"><b>{price}</b> {assured_image}</div>
+                                                        <div className="delivery-text">{free_delivery}</div>
+                                                    </div>
 
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col className='col-6'>
-                                <div className="card bg-light">
-                                    <div className="card-body text-center">
-                                        <div className="card-img">
-                                            <Link>
-                                                <img src={Iphone14_128gb} alt="Iphone" width={110} height={110} />
-                                                <p className='sub-title'>Apple iPhone 14 Plus Blue 128GB</p>
-                                            </Link>
-                                        </div>
-                                        <div className="card-text">
-                                            <p><span className='text-success'>2% Off </span> <del>₹69000</del></p>
-                                            <div className="assured"><b>₹ 1592 </b><img src={Assured} alt="Assured" width={77} /></div>
-                                            <div className="delivery-text">Free Delivery in Two Days</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </Col>
-
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    )
+                                })
+                            }
                         </Row>
                     </Container>
                 </div>
