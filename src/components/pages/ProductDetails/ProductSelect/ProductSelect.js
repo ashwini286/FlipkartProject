@@ -1,10 +1,11 @@
 import React from 'react'
 import './ProductSelect.scss'
-import BlueIphone from '../../../assets/images/product-details/61BGE6iu4AL._SL1500.jpg'
-import Midnight from '../../../assets/images/product-details/711JE_dD1KL._SL1500.jpg'
-import Purple from '../../../assets/images/product-details/61YSNhAb00L._SL1500.jpg'
-import StarLight from '../../../assets/images/product-details/71emcsxsRPL._SL1500.jpg'
-import Assured from '../../../assets/images/product-details/plue-fassured.png'
+import BlueIphone from '../../../../assets/images/product-details/iphone-pro-blue.jpg'
+import MidnightIphone from '../../../../assets/images/product-details/iphone-all.jpg'
+import PurpleIphone from '../../../../assets/images/product-details/iphone-pro-putple.jpg'
+import StarLightIphone from '../../../../assets/images/product-details/iphone-pro-yellow.jpg'
+import RedIphone from '../../../../assets/images/product-details/red-iphone.jpeg'
+import Assured from '../../../../assets/images/product-details/plue-fassured.png'
 import { Col, Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
@@ -24,25 +25,25 @@ const ProductSelect = () => {
                                 </Link>                         </div>
                             <div className='small-img'>
                                 <Link>
-                                    <img src={Midnight} alt="Iphone" width={100} />
+                                    <img src={MidnightIphone} alt="Iphone" width={100} />
                                     <h4>Midnight</h4>
                                 </Link>
                             </div>
                             <div className='small-img'>
                                 <Link>
-                                    <img src={Purple} alt="Iphone" width={100} />
+                                    <img src={PurpleIphone} alt="Iphone" width={100} />
                                     <h4>Purple</h4>
 
                                 </Link>                           </div>
                             <div className='small-img'>
                                 <Link>
-                                    <img src={Midnight} alt="Iphone" width={100} />
+                                    <img src={MidnightIphone} alt="Iphone" width={100} />
                                     <h4>Red</h4>
 
                                 </Link>                        </div>
                             <div className='small-img'>
                                 <Link>
-                                    <img src={StarLight} alt="Iphone" width={100} />
+                                    <img src={StarLightIphone} alt="Iphone" width={100} />
                                     <h4>Star Night</h4>
                                 </Link>
                             </div>

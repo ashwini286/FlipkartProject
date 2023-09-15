@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../components/common/Header/Header'
-import ProductsTab from '../components/ProductDetails/ProductsTab/ProductsTab'
-import ProductSelect from '../components/ProductDetails/ProductSelect/ProductSelect'
-import ProductDet from '../components/ProductDetails/ProductDet/ProductDet'
+import ProductsTab from '../components/pages/ProductDetails/ProductsTab/ProductsTab'
+import ProductSelect from '../components/pages/ProductDetails/ProductSelect/ProductSelect'
+import ProductDet from '../components/pages/ProductDetails/ProductDet/ProductDet'
 import Footer from '../components/common/Footer/Footer'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Helmet } from 'react-helmet'

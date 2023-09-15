@@ -1,9 +1,9 @@
 import React from 'react'
 import { Col, Container, Row } from 'reactstrap'
-import TopOffer from '../../../assets/images/top-offer.jpeg'
-import Fashion from '../../../assets/images/fashion.jpeg'
-import Mobiles from '../../../assets/images/phone.jpeg'
-import Electronic from '../../../assets/images/electronic.jpeg'
+import TopOffer from '../../../../assets/images/top-offer.jpeg'
+import Fashion from '../../../../assets/images/fashion.jpeg'
+import Mobiles from '../../../../assets/images/phone.jpeg'
+import Electronic from '../../../../assets/images/electronic.jpeg'
 import './CategorySection.scss'
 import { Link } from 'react-router-dom'
 

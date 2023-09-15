@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import './CardSection.scss'
 import { Link } from 'react-router-dom';
-import Iphone14_128gb from '../../../assets/images/homepage/61BGE6iu4AL._SL1500.jpg'
-import Assured from '../../../assets/images/assured.png'
-import { CardData } from '../../../Data/CardData';
+import Assured from '../../../../assets/images/assured.png'
+import { CardData } from '../../../../Data/CardData';
 
 const CardSection = () => {
 
@@ -79,7 +78,7 @@ const CardSection = () => {
                                 data.map((curElem) => {
                                     const { id, mobile_image, title, link, discount, del_price, price, assured_image, free_delivery } = curElem
                                     return (
-                                        <Col className='col-6 mb-4' key={id}>
+                                        <Col className='col-sm-6 col-12 mb-4' key={id}>
                                             <div className="card bg-light">
                                                 <div className="card-body text-center">
                                                     <div className="card-img">

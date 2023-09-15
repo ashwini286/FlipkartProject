@@ -1,9 +1,9 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
-import BannerSection from '../components/HomePage/BannerSection/BannerSection'
+import BannerSection from '../components/pages/HomePage/BannerSection/BannerSection'
 import Header from '../components/common/Header/Header'
-import CategorySection from '../components/HomePage/CategorySection/CategorySection'
-import CardSection from '../components/HomePage/CardSection/CardSection'
+import CategorySection from '../components/pages/HomePage/CategorySection/CategorySection'
+import CardSection from '../components/pages/HomePage/CardSection/CardSection'
 import { FaBars } from "react-icons/fa";
 
 const HomePage = () => {

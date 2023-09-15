@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react'
 import './ProductsTab.scss'
 import { Col, Container, Row } from 'reactstrap'
 import Slider from 'react-slick';
-import BlueIphone from '../../../assets/images/product-details/61BGE6iu4AL._SL1500.jpg'
-import Midnight from '../../../assets/images/product-details/711JE_dD1KL._SL1500.jpg'
-import Purple from '../../../assets/images/product-details/61YSNhAb00L._SL1500.jpg'
-import StarLight from '../../../assets/images/product-details/71emcsxsRPL._SL1500.jpg'
-import Heart from '../../../assets/images/product-details/love.webp'
-import Share from '../../../assets/images/product-details/share.webp'
+import BlueIphone from '../../../../assets/images/product-details/iphone-pro-blue.jpg'
+import MidnightIphone from '../../../../assets/images/product-details/iphone-all.jpg'
+import PurpleIphone from '../../../../assets/images/product-details/iphone-pro-putple.jpg'
+import StarLightIphone from '../../../../assets/images/product-details/iphone-pro-yellow.jpg'
+import Heart from '../../../../assets/images/product-details/love.webp'
+import Share from '../../../../assets/images/product-details/share.webp'
 
 const ProductsTab = () => {
 
@@ -65,16 +65,16 @@ const ProductsTab = () => {
                                         <img src={BlueIphone} alt="Iphone" height={350} width={"100%"} />
                                     </div>
                                     <div className='big-img-slider'>
-                                        <img src={Midnight} alt="Iphone" height={350} width={"100%"} />
+                                        <img src={MidnightIphone} alt="Iphone" height={350} width={"100%"} />
                                     </div>
                                     <div className='big-img-slider'>
-                                        <img src={Purple} alt="Iphone" height={350} width={"100%"} />
+                                        <img src={PurpleIphone} alt="Iphone" height={350} width={"100%"} />
                                     </div>
                                     <div className='big-img-slider'>
-                                        <img src={Midnight} alt="Iphone" height={350} width={"100%"} />
+                                        <img src={MidnightIphone} alt="Iphone" height={350} width={"100%"} />
                                     </div>
                                     <div className='big-img-slider'>
-                                        <img src={StarLight} alt="Iphone" height={350} width={"100%"} />
+                                        <img src={StarLightIphone} alt="Iphone" height={350} width={"100%"} />
                                     </div>
                                     
                                 </Slider>
@@ -95,16 +95,16 @@ const ProductsTab = () => {
                                         <img src={BlueIphone} alt="Iphone" width={100} />
                                     </div>
                                     <div className='small-img'>
-                                        <img src={Midnight} alt="Iphone" width={100} />
+                                        <img src={MidnightIphone} alt="Iphone" width={100} />
                                     </div>
                                     <div className='small-img'>
-                                        <img src={Purple} alt="Iphone" width={100} />
+                                        <img src={PurpleIphone} alt="Iphone" width={100} />
                                     </div>
                                     <div className='small-img'>
-                                        <img src={Midnight} alt="Iphone" width={100} />
+                                        <img src={MidnightIphone} alt="Iphone" width={100} />
                                     </div>
                                     <div className='small-img'>
-                                        <img src={StarLight} alt="Iphone" width={100} />
+                                        <img src={StarLightIphone} alt="Iphone" width={100} />
                                     </div>
                                 </Slider>
                             </Col>

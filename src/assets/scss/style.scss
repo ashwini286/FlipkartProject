@@ -198,3 +198,11 @@ input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="re
         display: none;
     }
 }
+
+.exit{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary_color;
+}

@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variable.scss';
+@import '../../../../assets/scss/variable.scss';
 
 .card-section{
     padding-bottom: 60px;
@@ -13,6 +13,15 @@
         }
     }
     .bottom-section{
+        .card{
+            @include md{
+                min-height: 310px;
+            }
+
+            @media only screen and (max-width: 479px){
+                // min-height: 395px;
+            }
+        }
         .delivery-text{
             font-size: 11px;
             margin: 10px 0 15px 0;
@@ -30,6 +39,9 @@
             a{
                 color: $black_color;
                 text-decoration: none;
+                &:hover{
+                    color: $primary_color_2;
+                }
             }
         }
     }

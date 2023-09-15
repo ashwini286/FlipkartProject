@@ -1,12 +1,11 @@
 import React from 'react'
-import Iphone from '../assets/images/homepage/iphone-blue.jpg'
-import ThumbnailIphone from '../assets/images/red-iphone.jpeg'
+import Iphone from '../../../assets/images/homepage/iphone-blue.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Helmet } from 'react-helmet';
 import { Button } from 'reactstrap';
 
-const OrderSummary = () => {
+const BlueIphoneOrderSummary = () => {
 
     const navigate = useNavigate()
 
@@ -71,10 +70,10 @@ const OrderSummary = () => {
                                         id="item_image" width="200px" />
                                     <div class="description">
                                         <div class="product-title mb-1" id="product-title">Apple iPhone 14 Plus</div>
-                                        <div class="product-detail mb-1" id="product-detail">Red</div>
+                                        <div class="product-detail mb-1" id="product-detail">Blue</div>
                                         <img loading="eager" class="_396cs4 _2amPTt _3qGmMb"
                                             alt="APPLE iPhone 14 ((PRODUCT)RED, 128 GB)"
-                                            src={ThumbnailIphone}
+                                            src={Iphone}
                                             width="77px" />
                                     </div>
                                 </div>
@@ -135,7 +134,7 @@ const OrderSummary = () => {
                                 <form >
                                     <input type="hidden" name="slug" id="slug" />
                                     <input type="hidden" name="address" id="address" value="Array" />
-                                    <button onClick={()=> navigate("/payment-details")} type="submit" class="btn bg-warning" >Continue</button>
+                                    <button onClick={()=> navigate("/blue-iphone-payment-details")} type="submit" class="btn bg-warning" >Continue</button>
                                 </form>
                             </div>
                         </div>
@@ -146,4 +145,4 @@ const OrderSummary = () => {
     )
 }
 
-export default OrderSummary
+export default BlueIphoneOrderSummary
