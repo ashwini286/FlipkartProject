@@ -15,6 +15,17 @@ import MidNightIphoneDeliveryAddress from '../views/Iphone/MidNightIphone/MidNig
 import MidNightIphonePaymentDetails from '../views/Iphone/MidNightIphone/MidNightIphonePaymentDetails';
 import MidNightIphoneOrderSummary from '../views/Iphone/MidNightIphone/MidNightIphoneOrderSummary';
 
+import DipPurpleIphoneDeliveryAddress from '../views/Iphone/DipPurpleIphone/DipPurpleIphoneDeliveryAddress';
+import DipPurpleIphonePaymentDetails from '../views/Iphone/DipPurpleIphone/DipPurpleIphonePaymentDetails';
+import DipPurpleIphoneProductDetails from '../views/Iphone/DipPurpleIphone/DipPurpleIphoneProductDetails';
+import DipPurpleIphoneOrderSummary from '../views/Iphone/DipPurpleIphone/DipPurpleIphoneOrderSummary'
+
+import SamGalaxyDeliveryAddress from '../views/Iphone/SamGalaxy/SamGalaxyDeliveryAddress';
+import SamGalaxyPaymentDetails from '../views/Iphone/SamGalaxy/SamGalaxyPaymentDetails';
+import SamGalaxyProductDetails from '../views/Iphone/SamGalaxy/SamGalaxyProductDetails';
+import SamGalaxyOrderSummary from '../views/Iphone/SamGalaxy/SamGalaxyOrderSummary'
+
+
 import ExitPage from '../views/ExitPage';
 
 const Router = () => {
@@ -35,6 +46,16 @@ const Router = () => {
           <Route path='/midnight-iphone-delivery-address' element={<MidNightIphoneDeliveryAddress />} />
           <Route path='/midnight-iphone-order-summary' element={<MidNightIphoneOrderSummary />} />
           <Route path='/midnight-iphone-payment-details' element={<MidNightIphonePaymentDetails />} />
+
+          <Route path='/deeppurple-iphone-product-details' element={<DipPurpleIphoneProductDetails />} />
+          <Route path='/deeppurple-iphone-delivery-address' element={<DipPurpleIphoneDeliveryAddress />} />
+          <Route path='/deeppurple-iphone-order-summary' element={<DipPurpleIphoneOrderSummary />} />
+          <Route path='/deeppurple-iphone-payment-details' element={<DipPurpleIphonePaymentDetails />} />
+
+          <Route path='/samsung-mobile-product-details' element={<SamGalaxyProductDetails />} />
+          <Route path='/samsung-mobile-delivery-address' element={<SamGalaxyDeliveryAddress />} />
+          <Route path='/samsung-mobile-order-summary' element={<SamGalaxyOrderSummary />} />
+          <Route path='/samsung-mobile-payment-details' element={<SamGalaxyPaymentDetails />} />
 
           <Route path='/delivery-address' element={<DeliveryAddress />} />
           <Route path='/order-summary' element={<OrderSummary />} />

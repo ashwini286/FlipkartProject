@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import './MidNightIphoneProductSelect.scss'
+import './DipPurpleIphoneProductSelect.scss'
 import BlueIphone from '../../../../../assets/images/product-details/iphone-pro-blue.jpg'
 import MidnightIphone from '../../../../../assets/images/product-details/iphone-all.jpg'
 import PurpleIphone from '../../../../../assets/images/product-details/iphone-pro-putple.jpg'
 import StarLightIphone from '../../../../../assets/images/product-details/iphone-pro-yellow.jpg'
-import RedIphone from '../../../../../assets/images/product-details/red-iphone.jpeg'
+import DeepPurpleIphone from '../../../../../assets/images/homepage/iphone-deep-purple.jpg'
 import Assured from '../../../../../assets/images/product-details/plue-fassured.png'
 import { Col, Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-const MidNightIphoneProductSelect = () => {
+const DipPurpleIphoneProductSelect = () => {
+
     const [minutes, setMinutes] = useState(16);
     const [seconds, setSeconds] = useState(30);
 
@@ -38,36 +39,38 @@ const MidNightIphoneProductSelect = () => {
                     <Row className="select-color">
                         <Col className="subtitle col-12"><h3>Select Color</h3></Col>
                         <Col className="select-color-list col-12">
-                            <div className='small-img'>
-                                <Link to="/blue-iphone-product-details">
-                                    <img src={BlueIphone} alt="Iphone" width={100} />
-                                    <h4>Blue</h4>
+                                <div className='small-img'>
+                                    <Link>
+                                        <img src={DeepPurpleIphone} alt="Iphone" width={100} />
+                                        <h4>Deep Purple</h4>
+                                    </Link>
+                                </div>
+                                <div className='small-img'>
+                                    <Link to="/blue-iphone-product-details">
+                                        <img src={BlueIphone} alt="Iphone" width={100} />
+                                        <h4>Blue</h4>
 
-                                </Link>                         </div>
-                            <div className='small-img'>
-                                <Link>
-                                    <img src={MidnightIphone} alt="Iphone" width={100} />
-                                    <h4>Midnight</h4>
-                                </Link>
-                            </div>
-                            <div className='small-img'>
-                                <Link>
-                                    <img src={PurpleIphone} alt="Iphone" width={100} />
-                                    <h4>Purple</h4>
+                                    </Link>
+                                </div>
 
-                                </Link>                           </div>
-                            <div className='small-img'>
-                                <Link>
-                                    <img src={MidnightIphone} alt="Iphone" width={100} />
-                                    <h4>Red</h4>
+                                <div className='small-img'>
+                                    <Link>
+                                        <img src={PurpleIphone} alt="Iphone" width={100} />
+                                        <h4>Purple</h4>
 
-                                </Link>                        </div>
-                            <div className='small-img'>
-                                <Link>
-                                    <img src={StarLightIphone} alt="Iphone" width={100} />
-                                    <h4>Star Night</h4>
-                                </Link>
-                            </div>
+                                    </Link>                           </div>
+                                <div className='small-img'>
+                                    <Link to="/midnight-iphone-product-details">
+                                        <img src={MidnightIphone} alt="Iphone" width={100} />
+                                        <h4>Red</h4>
+
+                                    </Link>                        </div>
+                                <div className='small-img'>
+                                    <Link>
+                                        <img src={StarLightIphone} alt="Iphone" width={100} />
+                                        <h4>Star Night</h4>
+                                    </Link>
+                                </div>
                         </Col>
                     </Row>
                     <Row className="select-color">
@@ -94,11 +97,11 @@ const MidNightIphoneProductSelect = () => {
                     <Row className='product-des'>
                         <Col >
                             <div className='card'>
-                                <div class="product-title"> Apple iPhone 14 Plus Blue  128GB</div>
+                                <div class="product-title">Apple iPhone 14 Pro ...  Deep Purple 128GB</div>
                                 <img src={Assured} alt="Assured" className='my-2' width={100} />
                                 <p class="text-success des">
                                     <b>2% off</b>
-                                    <del class="text-dark"> ₹ 69000</del>
+                                    <del class="text-dark"> ₹ 104000</del>
                                     <span class="text-dark"> ₹ 1592</span>
                                 </p>
                             </div>
@@ -116,4 +119,4 @@ const MidNightIphoneProductSelect = () => {
     )
 }
 
-export default MidNightIphoneProductSelect
+export default DipPurpleIphoneProductSelect
