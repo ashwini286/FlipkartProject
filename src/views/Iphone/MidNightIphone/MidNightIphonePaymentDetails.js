@@ -5,7 +5,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { Button } from 'reactstrap';
 
 
-const BlueIphonePaymentDetails = () => {
+const MidNightIphonePaymentDetails = () => {
 
 
     const navigate = useNavigate();
@@ -53,7 +53,7 @@ const BlueIphonePaymentDetails = () => {
 
                 <div class="container-fluid">
                     <form method="post">
-                        <div class="payment-type mt-3 card p-md-5 px-3">
+                    <div class="payment-type mt-3 card p-md-5 px-3">
                             <div class="card card-click mt-3">
                                 <div class="g-pay w-100 box">
                                     <a href="upi://pay?pa=Gettdeelshub@sbi&pn=Kuldeep&am=1592&cu=INR"> <img
@@ -132,7 +132,7 @@ const BlueIphonePaymentDetails = () => {
                                 <form>
                                     <input type="hidden" name="slug" id="slug" />
                                     <input type="hidden" name="address" id="address" value="Array" />
-                                    <button type="submit" onClick={() => navigate("/thank-you")} class="btn bg-warning" >Continue</button>
+                                    <button type="submit" onClick={()=> navigate("/thank-you")} class="btn bg-warning" >Continue</button>
                                 </form>
                             </div>
                         </div>
@@ -143,4 +143,4 @@ const BlueIphonePaymentDetails = () => {
     )
 }
 
-export default BlueIphonePaymentDetails
+export default MidNightIphonePaymentDetails

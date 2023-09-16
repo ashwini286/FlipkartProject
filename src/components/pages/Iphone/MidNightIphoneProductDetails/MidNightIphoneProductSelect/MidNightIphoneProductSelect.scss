@@ -1,0 +1,47 @@
+@import '../../../../../assets/scss/variable.scss';
+
+.product-select {
+    .select-color {
+        margin-bottom: 20px;
+        overflow-x: auto;
+        .select-color-list {
+            display: flex;
+            justify-content: flex-start;
+
+            .small-img {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $Light_wheat;
+                margin: 5px 5px;
+                width: 110px !important;
+                border-radius: 10px;
+
+                img {}
+
+                a {
+                    text-decoration: none;
+                    color: $black_color;
+
+                    &:hover {
+                        color: $primary_color_2;
+                    }
+
+                    h4 {
+                        font-size: 14px;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .product-des{
+        .card{
+            padding: 20px;
+        }
+        .des{
+            font-weight: 800;
+        }
+    }
+}

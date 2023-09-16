@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'reactstrap'
+import { Button, Col, Container, Row } from 'reactstrap'
 import './CardSection.scss'
 import { Link } from 'react-router-dom';
 import Assured from '../../../../assets/images/assured.png'
@@ -11,23 +11,23 @@ const CardSection = () => {
 
     const [minutes, setMinutes] = useState(10);
     const [seconds, setSeconds] = useState(30);
-  
+
     useEffect(() => {
-      let timer = setInterval(() => {
-        if (minutes === 0 && seconds === 0) {
-          clearInterval(timer); // Timer reached 00:00, stops the timer
-          alert("Time is over")
-        } else {
-          if (seconds === 0) {
-            setMinutes(minutes - 1);
-            setSeconds(59);
-          } else {
-            setSeconds(seconds - 1);
-          }
-        }
-      }, 1000);
-  
-      return () => clearInterval(timer);
+        let timer = setInterval(() => {
+            if (minutes === 0 && seconds === 0) {
+                clearInterval(timer); // Timer reached 00:00, stops the timer
+                alert("Time is over")
+            } else {
+                if (seconds === 0) {
+                    setMinutes(minutes - 1);
+                    setSeconds(59);
+                } else {
+                    setSeconds(seconds - 1);
+                }
+            }
+        }, 1000);
+
+        return () => clearInterval(timer);
     }, [minutes, seconds]);
 
 
@@ -78,21 +78,19 @@ const CardSection = () => {
                                 data.map((curElem) => {
                                     const { id, mobile_image, title, link, discount, del_price, price, assured_image, free_delivery } = curElem
                                     return (
-                                        <Col className='col-sm-6 col-12 mb-4' key={id}>
+                                        <Col className='col-6 mb-4 cards-main' key={id}>
                                             <div className="card bg-light">
                                                 <div className="card-body text-center">
                                                     <div className="card-img">
-                                                        <Link to={link}>
                                                             {mobile_image}
                                                             <p className='sub-title'>{title}</p>
-                                                        </Link>
                                                     </div>
                                                     <div className="card-text">
                                                         <p><span className='text-success'>{discount} </span> <del>{del_price}</del></p>
                                                         <div className="assured"><b>{price}</b> {assured_image}</div>
                                                         <div className="delivery-text">{free_delivery}</div>
                                                     </div>
-
+                                                    <Link to={link} color='primary' className='my-3 btn btn-primary'>Buy Now</Link>
                                                 </div>
                                             </div>
                                         </Col>

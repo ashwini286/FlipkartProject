@@ -13,10 +13,24 @@
         }
     }
     .bottom-section{
+
+        .cards-main{
+            display: flex;
+
+        }
         .card{
-            @include md{
-                min-height: 310px;
-            }
+            flex: 1;
+
+            // @include lg{
+            //     min-height: 375px;
+            // }
+
+            // @include sm{
+            //     min-height: 485px;
+            // }
+
+
+            
 
             @media only screen and (max-width: 479px){
                 // min-height: 395px;

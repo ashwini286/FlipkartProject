@@ -15,7 +15,8 @@ const BlueIphoneProductDetails = () => {
 
   return (
     <>
-       <Helmet>
+      <div className="product-details">
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!</title>
       </Helmet>
@@ -29,6 +30,7 @@ const BlueIphoneProductDetails = () => {
       AddLink="/blue-iphone-delivery-address"
       BuyLink="/blue-iphone-delivery-address"
        />
+      </div>
     </>
   )
 }

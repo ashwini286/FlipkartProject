@@ -1,5 +1,5 @@
 import React from 'react'
-import './BlueIphoneProductSelect.scss'
+import './MidNightIphoneProductSelect.scss'
 import BlueIphone from '../../../../../assets/images/product-details/iphone-pro-blue.jpg'
 import MidnightIphone from '../../../../../assets/images/product-details/iphone-all.jpg'
 import PurpleIphone from '../../../../../assets/images/product-details/iphone-pro-putple.jpg'
@@ -9,7 +9,7 @@ import Assured from '../../../../../assets/images/product-details/plue-fassured.
 import { Col, Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-const BlueIphoneProductSelect = () => {
+const MidNightIphoneProductSelect = () => {
     return (
         <>
             <div className="product-select">
@@ -18,13 +18,13 @@ const BlueIphoneProductSelect = () => {
                         <Col className="subtitle col-12"><h3>Select Color</h3></Col>
                         <Col className="select-color-list col-12">
                             <div className='small-img'>
-                                <Link>
+                                <Link to="/blue-iphone-product-details">
                                     <img src={BlueIphone} alt="Iphone" width={100} />
                                     <h4>Blue</h4>
 
                                 </Link>                         </div>
                             <div className='small-img'>
-                                <Link to="/midnight-iphone-product-details">
+                                <Link>
                                     <img src={MidnightIphone} alt="Iphone" width={100} />
                                     <h4>Midnight</h4>
                                 </Link>
@@ -94,4 +94,4 @@ const BlueIphoneProductSelect = () => {
     )
 }
 
-export default BlueIphoneProductSelect
+export default MidNightIphoneProductSelect

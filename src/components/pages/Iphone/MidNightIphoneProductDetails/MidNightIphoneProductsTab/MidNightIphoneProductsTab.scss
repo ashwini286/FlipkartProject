@@ -1,0 +1,75 @@
+@import '../../../../../assets/scss/variable.scss';
+
+.products-tab {
+    padding: 20px 0;
+
+    .product-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 30px;
+
+        .icon {
+            border-radius: 50px;
+            padding: 10px;
+            border: 1px solid $Light_wheat;
+            width: fit-content;
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .products-slider {
+        .topslider {
+
+        }
+
+        .btmslider {
+            @include md{
+                justify-content: center;
+            }
+            >.col{
+                max-width: 580px;
+                width: 100%;
+
+                @include sm{
+                    max-width: 340px;
+                }
+            }
+            margin-top: 30px;
+            .slick-current {
+                .small-img {
+                    img {
+                        border-color: $primary_color_1;
+                        border-width: 2px;
+
+                        @include md{
+                            border-width: 1px;
+                        }
+    
+                    }
+                }
+
+            }
+
+            .small-img {
+                img {
+                    border: 1px solid $Light_wheat;
+                    margin: 5px;
+                    width: 100px !important;
+                    border-radius: 10px;
+
+                    @include md{
+                        width: 95px !important;
+                    }
+
+                    @include sm{
+                        width: 55px !important;
+                    }
+
+                
+                }
+            }
+        }
+    }
+}

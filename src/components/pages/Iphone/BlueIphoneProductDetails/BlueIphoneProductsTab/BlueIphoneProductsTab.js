@@ -59,6 +59,7 @@ const BlueIphoneProductsTab = () => {
                                     className="mainSlider"
                                     asNavFor={nav2}
                                     dots={true}
+                                    arrows={false}
                                     ref={(slider1) => setNav1(slider1)}
                                 >
                                     <div className='big-img-slider'>
