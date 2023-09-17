@@ -93,8 +93,8 @@ const DipPurpleIphoneProductsTab = () => {
                                     swipeToSlide={true}
                                     focusOnSelect={true}
                                 >
-                                 <div className='big-img-slider'>
-                                        <img src={DeepPurpleIphone} alt="Iphone" height={100} />
+                                 <div className='small-img'>
+                                        <img src={DeepPurpleIphone} alt="Iphone" width={100} />
                                     </div>
                                     <div className='small-img'>
                                         <img src={BlueIphone} alt="Iphone" width={100} />
